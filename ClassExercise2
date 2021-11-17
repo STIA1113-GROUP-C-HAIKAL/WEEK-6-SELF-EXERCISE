@@ -1,0 +1,117 @@
+package ClassExercise;
+
+import java.util.Scanner;
+
+public class ClassExercise2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String subjectMath;
+		String subjectScience;
+		double mathMark;
+		double scienceMark;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Please insert your Math Subject :");
+		subjectMath = sc.next();
+		System.out.print("Please insert your Math Mark :");
+		mathMark = sc.nextDouble();
+		
+		System.out.print("Please insert your Science Subject :");
+		subjectScience = sc.next();
+		System.out.print("Please insert your Science Marks :");
+		scienceMark = sc.nextDouble();
+		
+		System.out.println();
+		
+		System.out.println("You have selected " + subjectMath + " and " + subjectScience);
+		
+		System.out.println();
+		
+		if (mathMark < 50)
+		{
+			System.out.println("You have failed on, " + subjectMath + " try again next year");
+		}
+		else
+		{
+			System.out.println("You have Passed on, " + subjectMath + " Congratulations!");
+			if ((mathMark >= 80) && (mathMark <= 100))
+			{
+				System.out.println("You have gained yourself the grade A for " + subjectMath);
+			}
+			else if ((mathMark >= 60) && (mathMark <= 79))
+			{
+				System.out.println("You have gained yourself the grade B for " + subjectMath);
+			}
+			else if ((mathMark >= 50) && (mathMark <= 59))
+			{
+				System.out.println("You have gained yourself the grade C for " + subjectMath);
+			}
+		}
+		
+		System.out.println();
+		
+		if (scienceMark < 50)
+		{
+			System.out.println("You have failed on, " + subjectScience + " try again next year");
+		}
+		else
+		{
+			System.out.println("You have Passed on, " + subjectScience + " Congratulations!");
+			if ((scienceMark >= 80) && (scienceMark <= 100))
+			{
+				System.out.println("You have gained yourself the grade A for " + subjectScience);
+			}
+			else if ((scienceMark >= 60) && (scienceMark <= 79))
+			{
+				System.out.println("You have gained yourself the grade B for " + subjectScience);
+			}
+			else if ((scienceMark >= 50) && (scienceMark <= 59))
+			{
+				System.out.println("You have gained yourself the grade C for " + subjectScience);
+			}
+		}
+		
+		System.out.println();
+		
+	double markWhole = (mathMark + scienceMark) / 2;
+		
+		if ((mathMark > 50) && (scienceMark > 50))
+		{
+			System.out.println("You have passed every subject, you may graduate if you wish to");
+			System.out.println("Your average mark is " + markWhole);
+			
+			if ((markWhole >= 80) && (markWhole <= 100))
+			{
+				System.out.println("You have gained yourself the grade A for all your subjects");
+				System.out.println("You may graduate with cumlaude as your status.");
+			}
+			else if ((markWhole >= 60) && (markWhole <= 79))
+			{
+				System.out.println("You have gained yourself the grade B for all your subjects");
+			}
+			else if ((markWhole >= 50) && (markWhole <= 59))
+			{
+				System.out.println("You have gained yourself the grade C for the average of your subjects");
+			}
+		} else
+		{
+			System.out.println("You may not graduate now as one of your subjects has failed.");
+		}
+		
+		System.out.println();
+		
+		if (mathMark < scienceMark)
+		{
+			System.out.println("Your " + subjectScience + " has a bigger mark than " + subjectMath);
+		}
+		else
+		{
+			System.out.println("Your " + subjectMath + " has a bigger mark than " + subjectScience);
+		}
+			
+		
+	}
+
+}
