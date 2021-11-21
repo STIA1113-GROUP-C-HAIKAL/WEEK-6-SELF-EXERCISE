@@ -1,0 +1,33 @@
+package mySwitch;
+
+import java.util.Scanner;
+
+public class MyGradeIfElse {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Please insert your grade : ");
+		String str = sc.next();
+		char grade = str.charAt(0);
+		
+		if (grade == 'A')
+			System.out.println("Your mark is more than 90!");
+		else if (grade == 'B')
+			System.out.println("Your mark is between 80 and less than 90.");
+		else if (grade == 'C')
+			System.out.println("Your mark is between 70 and less than 80.");
+		else if (grade == 'D')
+			System.out.println("Your mark is between 60 and less than 70.");
+		else if (grade == 'E')
+			System.out.println("Your mark is between 50 and less than 60.");
+		else if (grade == 'F')
+			System.out.println("Your mark is less than 40.");
+		else
+			System.out.println("INVALID GRADE");
+		
+		sc.close();
+	}
+
+}
