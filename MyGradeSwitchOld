@@ -1,0 +1,49 @@
+package mySwitch;
+
+import java.util.Scanner;
+
+public class MyGradeSwitch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Please insert your grade : ");
+		String str = sc.next();
+		char grade = str.charAt(0);
+		
+		switch (grade)
+		{
+		case 'A' | 'a' :
+			System.out.println("Your mark is more than 90!");
+			break;
+			
+		case 'B' | 'b' :
+			System.out.println("Your mark is between 80 and less than 90.");
+			break;
+			
+		case 'C' | 'c':
+			System.out.println("Your mark is between 70 and less than 80.");
+			break;
+			
+		case 'D' | 'd' :
+			System.out.println("Your mark is between 60 and less than 70.");
+			break;
+			
+		case 'E' | 'e' :
+			System.out.println("Your mark is between 50 and less than 60.");
+			break;
+			
+		case 'F' | 'f' :
+			System.out.println("Your mark is less than 40.");
+			break;
+			
+			default :
+				System.out.println("INVALID GRADE");
+			
+		}
+		sc.close();
+	}
+
+}
